@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:layout_margin="30dp"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+    <EditText
+        android:drawableRight="@drawable/ic_baseline_person_24"
+        android:id="@+id/txNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Nama"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:drawableRight="@drawable/ic_baseline_email_24"
+        android:id="@+id/txEmailReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:drawableRight="@drawable/ic_baseline_vpn_key_24"
+        android:id="@+id/txPasswordReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+    <EditText
+        android:drawableRight="@drawable/ic_baseline_vpn_key_24"
+        android:id="@+id/txKonPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Konfirmasi Password"
+        android:inputType="textPassword"/>
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DAFTAR"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/cardview_light_background"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/colorPrimary"/>
+
+
+</LinearLayout>
