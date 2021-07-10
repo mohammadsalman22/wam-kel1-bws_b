@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Login</string>
+    <string name="app_name">BookWisata</string>
+    <string name="tittle_slide_pertama">Ayo Liburan</string>
+    <string name="desc_slide_pertama">Tidak perlu khawatir dengan tujuan destinasi dan tidak perlu kebingungan dengan biaya yang dikeluarkan</string>
+    <string name="tittle_slide_kedua">Tentukan Tujuan</string>
+    <string name="desc_slide_kedua">Semua tersedia di sini dengan pilihan paket wisata lokal yang dapat memudahkan anda berwisata</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="mulai">Mulai</string>
+    <string name="powered_by">Powered By Team Spirit BWS</string>
 </resources>
