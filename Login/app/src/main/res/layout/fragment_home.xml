@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:id="@+id/fr_home"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+            <EditText
+                android:id="@+id/src"
+                android:background="@drawable/round_edt_text"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingStart="10dp"
+                android:focusable="auto"
+                android:drawableStart="@drawable/ic_search"
+                android:textColor="@color/black"
+                android:hint=" Cari Objek disini..." />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Pilihan Wisata"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_view_wisata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View All"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignEnd="@id/tv2" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_wisata"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_wisata"
+                    android:layout_below="@id/tv2" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilihan Travel"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/rv_wisata" />
+
+                <Button
+                    android:id="@+id/btn_view_travel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View All"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignEnd="@id/tv3"
+                    android:layout_below="@id/rv_wisata"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_travel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_below="@id/tv3"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/row_travel"/>
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilihan Homestay"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/rv_travel" />
+
+                <Button
+                    android:id="@+id/btn_view_homestay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View All"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignEnd="@id/tv3"
+                    android:layout_below="@id/rv_travel"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_homestay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_below="@id/tv4"
+                    tools:itemCount="6"
+                    tools:listitem="@layout/row_homestay"/>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

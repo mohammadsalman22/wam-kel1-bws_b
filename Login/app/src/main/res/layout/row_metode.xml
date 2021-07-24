@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="clip_vertical"
+            android:text="BCA"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_notujuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="clip_vertical"
+            android:text="1211098908"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/tv_nama"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/bayar"
+            android:background="@drawable/round_edt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bayar"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/id_objek"
+            android:layout_marginBottom="10dp"
+            android:text="test"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/waktu_mulai"
+            android:layout_marginBottom="10dp"
+            android:text="test"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_below="@id/id_objek"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/waktu_akhir"
+            android:layout_marginBottom="10dp"
+            android:text="test"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_below="@id/waktu_mulai"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/total_harga"
+            android:layout_marginBottom="10dp"
+            android:text="test"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_below="@id/waktu_akhir"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/id_pembayaran"
+            android:layout_marginBottom="10dp"
+            android:text="test"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_below="@id/total_harga"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/id_user"
+            android:layout_marginBottom="10dp"
+            android:text="test"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_below="@id/id_pembayaran"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/jumlah"
+            android:layout_marginBottom="10dp"
+            android:text="test"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_below="@id/id_user"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/id_objek2"
+            android:layout_marginBottom="10dp"
+            android:text="test"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_below="@id/jumlah"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

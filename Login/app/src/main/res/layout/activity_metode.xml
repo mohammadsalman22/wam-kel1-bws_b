@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".MetodeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="Pilihlah Metode Pembayaran anda "
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_metode"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/tv2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_metode" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/id_objek"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/rv_metode"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/waktu_mulai"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/id_objek"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/waktu_akhir"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/waktu_mulai"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/total_harga"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/waktu_akhir"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/id_pembayaran"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/total_harga"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/id_user"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/id_pembayaran"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/jumlah"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/id_user"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/id_objek2"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/jumlah"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+    </RelativeLayout>
+
+</ScrollView>

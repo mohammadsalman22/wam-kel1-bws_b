@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationView" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:itemIconTint="@drawable/state_bnv"
+        app:itemTextColor="@drawable/state_bnv"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="100dp"
+        android:visibility="gone"
+        app:floating_background_color="@color/colorPrimaryDark"
+        app:floating_left_icon="@drawable/ic_login"
+        app:floating_title="Login"
+        app:floating_title_color="@color/white" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:floating_title="Profil"
+        app:floating_left_icon="@drawable/ic_profil"
+        app:floating_background_color="@color/colorPrimaryDark"
+        app:floating_title_color="@color/white"
+        android:visibility="gone"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:floating_title="Daftar"
+        app:floating_left_icon="@drawable/ic_register"
+        app:floating_background_color="@color/colorPrimaryDark"
+        app:floating_title_color="@color/white"
+        android:visibility="gone"
+        android:layout_above="@id/btn1"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentEnd="true" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:floating_title="Logout"
+        app:floating_left_icon="@drawable/ic_logout"
+        app:floating_background_color="@color/colorPrimaryDark"
+        app:floating_title_color="@color/white"
+        android:visibility="gone"
+        android:layout_above="@id/btn2"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentEnd="true" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:id="@+id/btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:floating_title="Transaksi"
+        app:floating_left_icon="@drawable/ic_riwayat"
+        app:floating_background_color="@color/colorPrimaryDark"
+        app:floating_title_color="@color/white"
+        android:visibility="gone"
+        android:layout_above="@id/btn4"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

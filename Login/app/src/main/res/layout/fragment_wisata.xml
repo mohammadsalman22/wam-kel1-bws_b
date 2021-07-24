@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:id="@+id/fr_wisata"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <EditText
+                    android:id="@+id/src"
+                    android:background="@drawable/round_edt_text"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingStart="10dp"
+                    android:drawableStart="@drawable/ic_search"
+                    android:textColor="@color/black"
+                    android:hint=" Cari Objek disini..." />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kategori" />
+
+                <HorizontalScrollView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/scroll"
+                    android:layout_below="@id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp">
+
+                    <LinearLayout
+                        android:id="@+id/filterTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_ijenraung"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:text="KSPK Ijen Raung"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_argopuro"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KSPK Argopuro"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_solor"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_edt_text"
+                            android:text="KSPK Solor"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_sejarah"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_edt_text"
+                            android:text="KSPK Megalitikum dan Sejarah"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_below="@id/scroll"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis" />
+
+                <HorizontalScrollView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/scroll1"
+                    android:layout_below="@id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp">
+
+                    <LinearLayout
+                        android:id="@+id/filterTab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_bahari"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Wisata Bahari"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_budaya"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wisata Budaya"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_pertanian"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Wisata Pertanian"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_buru"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Wisata Buru"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_ziarah"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Wisata Ziarah"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_cagaralam"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Wisata Cagar Alam"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_konversi"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Wisata Konversi"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/t"
+                    android:layout_below="@id/scroll1"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Harga" />
+
+                <HorizontalScrollView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/scroll3"
+                    android:layout_below="@id/t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp">
+
+                    <LinearLayout
+                        android:id="@+id/filterTab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_murah"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Termurah"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_mahal"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Termahal"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <Button
+                    android:padding="7dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/scroll3"
+                    android:id="@+id/btn_filter"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:background="@color/white"
+                    android:drawableTint="@color/black"
+                    android:drawableEnd="@drawable/ic_filter"
+                    android:text="Filter"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_below="@id/scroll3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Pilihan Wisata"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_wisata"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/tv2"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_wisata" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

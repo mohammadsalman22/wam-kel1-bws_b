@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_login"
+        android:icon="@drawable/ic_login"
+        android:title="Login" />
+
+    <item
+        android:id="@+id/menu_daftar"
+        android:icon="@drawable/ic_register"
+        android:title="Daftar" />
+
+    <item
+        android:id="@+id/menu_favorit"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorite" />
+
+    <item
+        android:id="@+id/menu_riwayat"
+        android:icon="@drawable/ic_riwayat"
+        android:title="Riwayat" />
+
+</menu>

@@ -55,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
             android:paddingBottom="20dp" />
 
         <Button
@@ -68,39 +69,7 @@
             android:drawableRight="@drawable/next_btn"
             android:onClick="next"
             android:paddingBottom="30dp" />
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/tittle_slide_pertama"-->
-<!--        android:layout_margin="30dp"-->
-<!--        android:textStyle="bold"-->
-<!--        android:textSize="20sp" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/tvAyoLiburan"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginLeft="30dp"-->
-<!--        android:layout_marginRight="30dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:text="@string/desc_slide_pertama"/>-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btnMulai"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Mulai"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:textColor="@color/cardview_light_background"-->
-<!--        android:layout_margin="30dp"-->
-<!--        android:backgroundTint="@color/colorPrimary"/>-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:srcCompat="@drawable/welcome1" />-->

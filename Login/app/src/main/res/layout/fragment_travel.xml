@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <EditText
+                    android:id="@+id/src"
+                    android:background="@drawable/round_edt_text"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingStart="10dp"
+                    android:drawableStart="@drawable/ic_search"
+                    android:textColor="@color/black"
+                    android:hint=" Cari Objek disini..." />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Kendaraan" />
+
+                <HorizontalScrollView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/scroll"
+                    android:layout_below="@id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp">
+
+                    <LinearLayout
+                        android:id="@+id/filterTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_sepeda"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Sepeda Motor"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_mobil"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mobil"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_busmini"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Bus Mini"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_bus"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Bus"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_below="@id/scroll"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Harga" />
+
+                <HorizontalScrollView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/scroll1"
+                    android:layout_below="@id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp">
+
+                    <LinearLayout
+                        android:id="@+id/filterTab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_murah"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:text="Termurah"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:padding="7dp"
+                            android:id="@+id/btn_mahal"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Termahal"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:background="@drawable/round_edt_text"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <Button
+                    android:padding="7dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/scroll1"
+                    android:id="@+id/btn_filter"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:background="@color/white"
+                    android:drawableTint="@color/black"
+                    android:drawableEnd="@drawable/ic_filter"
+                    android:text="Filter"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_below="@id/scroll1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Pilihan Travel"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_travel"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/tv2"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_travel_homestay" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

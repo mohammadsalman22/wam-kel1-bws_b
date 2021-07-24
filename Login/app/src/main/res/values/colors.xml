@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="darkerGrey">#A9A9A9</color>
     <color name="colorPrimary">#3b5998</color>
     <color name="colorPrimaryDark">#3b4c98</color>
     <color name="colorAccent">#3b5998</color>
@@ -14,4 +15,11 @@
     <color name="light_white">#f2f5f8</color>
     <color name="brown_light_banner">#f1e9ce</color>
     <color name="splash">#F38000</color>
+    <color name="textColor">#273D52</color>
+    <color name="headerColor">#145795</color>
+    <color name="startColor">#006797</color>
+    <color name="endcolor">#489985</color>
+    <color name="centerColor">#006797</color>
+    <color name="userRow">#403fc68b</color>
+    <color name="iconColor">#145798</color>
 </resources>
