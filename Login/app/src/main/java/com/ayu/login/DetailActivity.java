@@ -145,7 +145,6 @@ public class DetailActivity extends AppCompatActivity {
 
     private void initView() {
         imgView = findViewById(R.id.imgView);
-        tvId = findViewById(R.id.tvId);
         tvNama = findViewById(R.id.tvNama);
         tvDeskripsi = findViewById(R.id.tvDeskripsi);
         tvHarga = findViewById(R.id.tvHarga);
@@ -156,7 +155,6 @@ public class DetailActivity extends AppCompatActivity {
         String imgUrl = ApiClient.DOMAIN + mData.getStringExtra("gambar");
         Glide.with(DetailActivity.this).load(imgUrl).into(imgView);
 
-        tvId.setText("" + mData.getIntExtra("id",0));
         tvNama.setText(mData.getStringExtra("nama"));
         tvTag.setText(mData.getStringExtra("tag"));
         tvHarga.setText("Rp "+ mData.getIntExtra("harga", 0));

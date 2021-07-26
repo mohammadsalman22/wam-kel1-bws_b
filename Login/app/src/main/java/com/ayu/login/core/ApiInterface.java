@@ -2,6 +2,7 @@ package com.ayu.login.core;
 
 import com.ayu.login.model.Booking;
 import com.ayu.login.model.DetailBooking;
+import com.ayu.login.model.GetBooking;
 import com.ayu.login.model.GetHomestay;
 import com.ayu.login.model.GetMetode;
 import com.ayu.login.model.GetTravel;
@@ -57,6 +58,10 @@ public interface ApiInterface {
     Call<Login> Login (@Field("username") String username,
                        @Field("password") String password);
 
+    @FormUrlEncoded
+    @POST("get-profiluser")
+    Call<Login> getProfilUser(@Field("id_user") int id_user);
+
     @GET("get-metode")
     Call<GetMetode> getMetode();
 
@@ -80,5 +85,10 @@ public interface ApiInterface {
                           @Field("id_wisata") String id_wisata,
                           @Field("jumlah_pesan") String jumlah_pesan);
 
+    @GET("get-booking-wisata")
+    Call<GetBooking> getBookingWisata(@Query("id_user") int id_user);
+
+    @GET("get-booking-travel")
+    Call<GetBooking> getBookingTravel(@Query("id_user") int id_user);
 
 }

@@ -49,99 +49,99 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_marginTop="90dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <RelativeLayout-->
+<!--        android:layout_marginTop="90dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
-        <TextView
-            android:id="@+id/id_objek"
-            android:layout_marginBottom="10dp"
-            android:text="test"
-            android:textColor="@color/black"
-            android:textSize="19sp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <TextView-->
+<!--            android:id="@+id/id_objek"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
-        <TextView
-            android:id="@+id/waktu_mulai"
-            android:layout_marginBottom="10dp"
-            android:text="test"
-            android:textColor="@color/black"
-            android:textSize="19sp"
-            android:layout_below="@id/id_objek"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <TextView-->
+<!--            android:id="@+id/waktu_mulai"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/id_objek"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
-        <TextView
-            android:id="@+id/waktu_akhir"
-            android:layout_marginBottom="10dp"
-            android:text="test"
-            android:textColor="@color/black"
-            android:textSize="19sp"
-            android:layout_below="@id/waktu_mulai"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <TextView-->
+<!--            android:id="@+id/waktu_akhir"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/waktu_mulai"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
-        <TextView
-            android:id="@+id/total_harga"
-            android:layout_marginBottom="10dp"
-            android:text="test"
-            android:textColor="@color/black"
-            android:textSize="19sp"
-            android:layout_below="@id/waktu_akhir"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <TextView-->
+<!--            android:id="@+id/total_harga"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/waktu_akhir"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
-        <TextView
-            android:id="@+id/id_pembayaran"
-            android:layout_marginBottom="10dp"
-            android:text="test"
-            android:textColor="@color/black"
-            android:textSize="19sp"
-            android:layout_below="@id/total_harga"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <TextView-->
+<!--            android:id="@+id/id_pembayaran"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/total_harga"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
-        <TextView
-            android:id="@+id/id_user"
-            android:layout_marginBottom="10dp"
-            android:text="test"
-            android:textColor="@color/black"
-            android:textSize="19sp"
-            android:layout_below="@id/id_pembayaran"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <TextView-->
+<!--            android:id="@+id/id_user"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/id_pembayaran"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
-        <TextView
-            android:id="@+id/jumlah"
-            android:layout_marginBottom="10dp"
-            android:text="test"
-            android:textColor="@color/black"
-            android:textSize="19sp"
-            android:layout_below="@id/id_user"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <TextView-->
+<!--            android:id="@+id/jumlah"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/id_user"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
-        <TextView
-            android:id="@+id/id_objek2"
-            android:layout_marginBottom="10dp"
-            android:text="test"
-            android:textColor="@color/black"
-            android:textSize="19sp"
-            android:layout_below="@id/jumlah"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <TextView-->
+<!--            android:id="@+id/id_objek2"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_below="@id/jumlah"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
 </androidx.cardview.widget.CardView>

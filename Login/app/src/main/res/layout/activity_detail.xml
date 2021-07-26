@@ -116,23 +116,11 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/row_travel" />
 
-        <TextView
-            android:id="@+id/tvId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:layout_below="@id/rv_travelhomestay"
-            android:text="Id"
-            android:textStyle="normal"
-            android:textColor="@android:color/black"
-            android:textSize="15sp" />
-
         <RelativeLayout
             android:id="@+id/layout_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvId">
+            android:layout_below="@+id/rv_travelhomestay">
 
             <Button
                 android:id="@+id/btn_pesan"

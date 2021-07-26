@@ -34,7 +34,6 @@ public class MetodeActivity extends AppCompatActivity {
     private MetodeAdapter metodeAdapter;
     private RecyclerView rvMetode;
     private Intent mData;
-    private TextView tvNama, tvNotujuan, idObjek, idObjek2, waktuMulai, waktuAkhir, totalHarga, idPembayaran, idUser, jumlah;
     private List<Metode> listMetode;
 
     @Override
@@ -47,9 +46,6 @@ public class MetodeActivity extends AppCompatActivity {
 
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
         rvMetode = findViewById(R.id.rv_metode);
-        tvNama = findViewById(R.id.tv_nama);
-
-        initView();
 
         getDataMetode();
 
@@ -60,33 +56,6 @@ public class MetodeActivity extends AppCompatActivity {
         MetodeActivity.this.finish();
         return true;
     }
-    private void initView() {
-//        tvNama = findViewById(R.id.tvNama);
-//        tvNotujuan = findViewById(R.id.tv_notujuan);
-//        idObjek = findViewById(R.id.id_objek);
-//        idObjek2 = findViewById(R.id.id_objek2);
-//        waktuMulai = findViewById(R.id.waktu_mulai);
-//        waktuAkhir = findViewById(R.id.waktu_akhir);
-//        totalHarga = findViewById(R.id.total_harga);
-//        idPembayaran = findViewById(R.id.id_pembayaran);
-//        idUser = findViewById(R.id.id_user);
-//        jumlah = findViewById(R.id.jumlah);
-
-    }
-
-//    private void setData() {
-////        tvNama.setText(mData.getStringExtra("nama"));
-////        tvNotujuan.setText(mData.getStringExtra("no_tujuan"));
-//        idObjek.setText(mData.getStringExtra("id_wisata"));
-//        idObjek2.setText(mData.getStringExtra("id_travel_homestay"));
-//        waktuMulai.setText(mData.getStringExtra("waktu_mulai"));
-//        waktuAkhir.setText(mData.getStringExtra("waktu_akhir"));
-//        totalHarga.setText(mData.getStringExtra("harga"));
-////        idPembayaran.setText(mData.getIntExtra("id_pembayaran", 0));
-//        idUser.setText(mData.getStringExtra("id_user"));
-//        jumlah.setText(mData.getStringExtra("jumlah_pesan"));
-//
-//    }
 
     private void getDataMetode() {
         Call<GetMetode> callMetode = apiInterface.getMetode();

@@ -1,11 +1,14 @@
 package com.ayu.login.fragment;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +23,7 @@ import com.ayu.login.MainActivity;
 import com.ayu.login.R;
 import com.ayu.login.adapter.TravelAdapter;
 import com.ayu.login.adapter.WisataAdapter;
+import com.ayu.login.adapter.WisataHomeAdapter;
 import com.ayu.login.core.ApiClient;
 import com.ayu.login.core.ApiInterface;
 import com.ayu.login.model.GetTravel;
@@ -27,6 +31,7 @@ import com.ayu.login.model.GetWisata;
 import com.ayu.login.model.TravelHomestay;
 import com.ayu.login.model.Wisata;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -45,6 +50,9 @@ public class WisataFragment extends Fragment {
     private WisataAdapter wisataAdapter;
     private List<Wisata> listWisata;
     private RecyclerView rvWisata;
+    private List<Wisata> listSearch; // nampung hasil pencarian
+
+    EditText editSearch;
 
     private Button button11, button12, button13, button14;
     private Button button21, button22, button23, button24, button25, button26, button27;
@@ -72,12 +80,52 @@ public class WisataFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
         rvWisata = view.findViewById(R.id.rv_wisata);
+        editSearch = view.findViewById(R.id.src);
+
+        listSearch = new ArrayList<>();
 
         initWidgets(view);
 
         hideFilter();
 
         getDataWisata();
+
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(s.length() > 0) {
+                    if(listSearch.size() > 0) {
+                        Log.d("cari", "kosongkan list pencarian");
+                        listSearch.clear();
+                    }
+                    // melakukan pencarian
+                    Log.d("cari", s.toString());
+                    for(Wisata item:listWisata) {
+                        String data = item.getNama_wisata().toLowerCase();
+                        if(data.contains(s.toString().toLowerCase())) {
+                            listSearch.add(item);
+                        }
+                    }
+                    wisataAdapter = new WisataAdapter(getActivity(), listSearch);
+                    rvWisata.setAdapter(wisataAdapter);
+                }
+                else {
+                    // jika kolom pencarian kosong
+                    Log.d("cari", "kolom kosong");
+                    getDataWisata();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
     }
 

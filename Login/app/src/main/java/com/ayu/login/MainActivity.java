@@ -90,7 +90,6 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ProfilActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -123,7 +122,6 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RiwayatActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 

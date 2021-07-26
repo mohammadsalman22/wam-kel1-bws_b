@@ -1,11 +1,14 @@
 package com.ayu.login.fragment;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,11 +22,14 @@ import com.ayu.login.MainActivity;
 import com.ayu.login.R;
 import com.ayu.login.adapter.TravelAdapter;
 import com.ayu.login.adapter.TravelHomeAdapter;
+import com.ayu.login.adapter.WisataAdapter;
 import com.ayu.login.core.ApiClient;
 import com.ayu.login.core.ApiInterface;
 import com.ayu.login.model.GetTravel;
 import com.ayu.login.model.TravelHomestay;
+import com.ayu.login.model.Wisata;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -42,6 +48,10 @@ public class TravelFragment extends Fragment {
     private TravelAdapter travelAdapter;
     private List<TravelHomestay> listTravel;
     private RecyclerView rvTravel;
+
+    private List<TravelHomestay> listSearch; // nampung hasil pencarian
+
+    EditText editSearch;
 
     private Button button11, button12, button13, button14;
     private Button button21, button22;
@@ -68,12 +78,52 @@ public class TravelFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
         rvTravel = view.findViewById(R.id.rv_travel);
+        editSearch = view.findViewById(R.id.src);
+
+        listSearch = new ArrayList<>();
 
         initWidgets(view);
 
         hideFilter();
 
         getDataTravel();
+
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(s.length() > 0) {
+                    if(listSearch.size() > 0) {
+                        Log.d("cari", "kosongkan list pencarian");
+                        listSearch.clear();
+                    }
+                    // melakukan pencarian
+                    Log.d("cari", s.toString());
+                    for(TravelHomestay item:listTravel) {
+                        String data = item.getNama_travel_homestay().toLowerCase();
+                        if(data.contains(s.toString().toLowerCase())) {
+                            listSearch.add(item);
+                        }
+                    }
+                    travelAdapter = new TravelAdapter(getActivity(), listSearch);
+                    rvTravel.setAdapter(travelAdapter);
+                }
+                else {
+                    // jika kolom pencarian kosong
+                    Log.d("cari", "kolom kosong");
+                    getDataTravel();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
     }
 

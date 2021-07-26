@@ -1,11 +1,14 @@
 package com.ayu.login.fragment;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +28,7 @@ import com.ayu.login.model.GetHomestay;
 import com.ayu.login.model.GetTravel;
 import com.ayu.login.model.TravelHomestay;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -43,6 +47,10 @@ public class HomestayFragment extends Fragment {
     private HomestayAdapter homestayAdapter;
     private List<TravelHomestay> listHomestay;
     private RecyclerView rvHomestay;
+
+    private List<TravelHomestay> listSearch; // nampung hasil pencarian
+
+    EditText editSearch;
 
     private Button button11, button12, button13;
     private Button button21, button22;
@@ -69,12 +77,52 @@ public class HomestayFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
         rvHomestay = view.findViewById(R.id.rv_homestay);
+        editSearch = view.findViewById(R.id.src);
+
+        listSearch = new ArrayList<>();
 
         initWidgets(view);
 
         hideFilter();
 
         getDataHomestay();
+
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(s.length() > 0) {
+                    if(listSearch.size() > 0) {
+                        Log.d("cari", "kosongkan list pencarian");
+                        listSearch.clear();
+                    }
+                    // melakukan pencarian
+                    Log.d("cari", s.toString());
+                    for(TravelHomestay item:listHomestay) {
+                        String data = item.getNama_travel_homestay().toLowerCase();
+                        if(data.contains(s.toString().toLowerCase())) {
+                            listSearch.add(item);
+                        }
+                    }
+                    homestayAdapter = new HomestayAdapter(getActivity(), listSearch);
+                    rvHomestay.setAdapter(homestayAdapter);
+                }
+                else {
+                    // jika kolom pencarian kosong
+                    Log.d("cari", "kolom kosong");
+                    getDataHomestay();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 
     }
 

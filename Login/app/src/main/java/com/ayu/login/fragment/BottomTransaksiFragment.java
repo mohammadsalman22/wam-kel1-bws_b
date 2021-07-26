@@ -137,6 +137,7 @@ public class BottomTransaksiFragment extends BottomSheetDialogFragment {
             goDetail.putExtra("harga", i2);
             goDetail.putExtra("id_user", i3);
             getActivity().startActivity(goDetail);
+            getActivity().finish();
         }
 
 
@@ -175,7 +176,7 @@ public class BottomTransaksiFragment extends BottomSheetDialogFragment {
         Bundle args = new Bundle();
         args.putInt("year", calender.get(Calendar.YEAR));
         args.putInt("month", calender.get(Calendar.MONTH));
-        args.putInt("day", calender.get(Calendar.DAY_OF_MONTH));
+        args.putInt("day", calender.get(Calendar.DAY_OF_MONTH)+1);
         date.setArguments(args);
         /**
          * Set Call back to capture selected date

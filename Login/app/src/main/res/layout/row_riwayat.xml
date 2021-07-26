@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="Kode Booking"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_kode_booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1211098908"
+            android:layout_toRightOf="@id/tv1"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_below="@id/tv1"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_toRightOf="@id/tv2"
+            android:layout_below="@id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Air Terjun"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_below="@id/tv2"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Pesan"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_jumlah_pesan"
+            android:layout_toRightOf="@id/tv3"
+            android:layout_below="@id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_below="@id/tv3"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="Total Harga"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_total_harga"
+            android:layout_toRightOf="@id/tv4"
+            android:layout_below="@id/tv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 90.000,-"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_below="@id/tv4"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_toRightOf="@id/tv5"
+            android:layout_below="@id/tv4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menunggu"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/submit"
+            android:background="@drawable/round_edt_text"
+            android:layout_width="66dp"
+            android:layout_height="33dp"
+            android:text="Submit"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
